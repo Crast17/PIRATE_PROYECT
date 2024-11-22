@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6f8382aa876d3c43978a9676a3394f1
+guid: ea119ecf628408a42be2aff8349e4b7b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Boat
-    second: {fileID: 2100000, guid: d0e2a4a5cc681a146bae248ebbf2274a, type: 2}
+      name: uv_checker_material_color_grid_1024x1024
+    second: {fileID: 2100000, guid: 20fc245ff4d99444595b33ed91602549, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
