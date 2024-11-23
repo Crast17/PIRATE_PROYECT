@@ -226,11 +226,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &42968728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,6 +482,9 @@ MonoBehaviour:
   lifetext: {fileID: 0}
   mapastext: {fileID: 0}
   menu: {fileID: 0}
+  spawner: {fileID: 0}
+  finalCanvas: {fileID: 0}
+  coinsFinales: {fileID: 0}
 --- !u!1001 &73249409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,11 +753,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &256301589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,11 +1031,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &501387295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3086,11 +3104,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &952377836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4088,11 +4111,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &1276339703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4315,6 +4343,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 952a4a2b7049be547af37db549d92b40, type: 3}
   m_PrefabInstance: {fileID: 1365124931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1374528244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.988057
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 82.33479
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db452f8365b67cb46b98843fc0d13d11, type: 2}
+    - target: {fileID: 919132149155446097, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
+      propertyPath: m_Name
+      value: Coin_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b1a11421c087d8469b35b684d9493df, type: 3}
 --- !u!1001 &1391738059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4461,11 +4550,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!4 &1427285859
 Transform:
   m_ObjectHideFlags: 0
@@ -4925,11 +5019,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &1638789009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5050,11 +5149,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &1664923602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5996,8 +6100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 5449951153540035458, guid: 917820a9deafb4d4eb033eab665beb9d, type: 3}
   mapa: {fileID: 8917046852446074746, guid: 25fc0759d982bb54f9355d9376ba6ac9, type: 3}
+  coin: {fileID: 0}
   cooldownMapa: 5
   cooldownAleta: 3
+  cooldownCoin: 0
   minPosition: {x: -25, y: 0, z: -25}
   maxPosition: {x: 25, y: 0, z: 25}
   spawnsAleta:
@@ -6020,6 +6126,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!4 &1905007054
 Transform:
   m_ObjectHideFlags: 0
@@ -6155,11 +6264,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1001 &1952868406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7052,11 +7166,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aleta: {fileID: 0}
   mapa: {fileID: 0}
+  coin: {fileID: 0}
   cooldownMapa: 0
   cooldownAleta: 0
+  cooldownCoin: 0
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
   spawnsAleta: []
+  tiempoDestroyMapa: 0
+  tiempoDestroyCoin: 0
+  tiempoDestroyAleta: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -7072,3 +7191,4 @@ SceneRoots:
   - {fileID: 790774699}
   - {fileID: 1905007054}
   - {fileID: 1848259978}
+  - {fileID: 1374528244}

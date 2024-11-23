@@ -127,15 +127,15 @@ Material:
     - _ReflectionDistortion: 0.38
     - _RefractionScale: 10
     - _RefractionSpeed: 0.01
-    - _RefractionStrength: 0
+    - _RefractionStrength: 0.01
     - _RippleStrength: 83.62
     - _SecondaryFoamBlend: 0.06
     - _SkyboxForce: 2.5
     - _Steps: 1
     - _SurfaceFoamDirection: 0
-    - _SurfaceFoamDistorsion: 0.38
-    - _SurfaceFoamSpeed: 0
-    - _SurfaceFoamTiling: 2.04
+    - _SurfaceFoamDistorsion: 0.5
+    - _SurfaceFoamSpeed: 0.05
+    - _SurfaceFoamTiling: 0.41
     - _TileSize: 200
     - _WORLD_SPACE_UV: 1
     - _WaterAlpha: 1
@@ -147,7 +147,7 @@ Material:
     - _WaveStepness: 0.35
     m_Colors:
     - _BaseColor: {r: 0, g: 0.1989687, b: 1.110646, a: 1}
-    - _CaveColor: {r: 0.21881218, g: 0.21216798, b: 0.4867924, a: 0.41960785}
+    - _CaveColor: {r: 0.21881218, g: 0.21216798, b: 0.4867924, a: 0}
     - _CaveOffset: {r: -0.45, g: 0, b: 0, a: 0}
     - _CaveScale: {r: 5, g: 5, b: 0, a: 0}
     - _CaveSecondaryColor: {r: 0, g: 0, b: 0, a: 0}
@@ -155,12 +155,12 @@ Material:
     - _FoamUVsOffset: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _FresnelColor: {r: 2.670157, g: 2.670157, b: 2.670157, a: 0}
     - _HorizonColor: {r: 7.3772106, g: 3.6607668, b: 6.6577153, a: 1}
-    - _IntersectionFoamColor: {r: 1.1486984, g: 1.1486984, b: 1.1486984, a: 1}
+    - _IntersectionFoamColor: {r: 1.1486984, g: 1.1486984, b: 1.1486984, a: 0.74509805}
     - _PositionRipples: {r: 0, g: 0, b: 0, a: 0}
-    - _SecondaryFoamColor: {r: 0, g: 0.059620205, b: 0.19215687, a: 0.40784314}
-    - _ShallowColor: {r: 0, g: 0.3676714, b: 0.7058824, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 0.31764707}
-    - _SurfaceFoamColor: {r: 1.7129308, g: 1.7129308, b: 1.7129308, a: 0.2784314}
+    - _SecondaryFoamColor: {r: 0.07662869, g: 0.28214142, b: 0.7735849, a: 0}
+    - _ShallowColor: {r: 0.027411893, g: 0.29059452, b: 0.5283019, a: 1}
+    - _SpecularColor: {r: 0, g: 0.054572523, b: 0.1882353, a: 0.09411765}
+    - _SurfaceFoamColor: {r: 0.6999832, g: 0.6999832, b: 0.6999832, a: 0.50980395}
     - _TopColor: {r: 0, g: 0.17848217, b: 0.5622641, a: 0.44705883}
     - _UV: {r: 0, g: 0, b: 0, a: 0}
     - _UVRipples: {r: 0, g: 0, b: 0, a: 0}
