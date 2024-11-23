@@ -19,7 +19,8 @@ public class player : MonoBehaviour
     public GameObject menu;
     public Spawner spawner;
 
-   
+    public GameObject finalCanvas;
+    public TextMeshProUGUI coinsFinales;
     // Update is called once per frame
     void Update()
     {
@@ -34,7 +35,7 @@ public class player : MonoBehaviour
             Time.timeScale = 0;            
         }
         //SI MUERES REINICIAR LA ESCENA
-        if (life <= 0) SceneManager.LoadScene(0);
+        if (life <= 0) StartCoroutine(Die());
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -59,5 +60,14 @@ public class player : MonoBehaviour
             spawner.StartPowerUp();
             Destroy(other.gameObject);
         }
+    }
+    IEnumerator Die()
+    {
+        Time.timeScale = 0;
+        finalCanvas.SetActive(true);
+        coinsFinales.text = "Has conseguido " + monedas.ToString() + " monedas"; 
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene(0);
+
     }
 }
