@@ -1,25 +1,31 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
-{
-   
-
+{   
     public GameObject aleta; 
     public GameObject mapa; 
+    public GameObject coin; 
 
     public float cooldownMapa;
     public float cooldownAleta;
+    public float cooldownCoin;
 
     public Vector3 minPosition; // Límite inferior del rango (X, Y, Z)
     public Vector3 maxPosition; // Límite superior del rango (X, Y, Z)
 
     public GameObject[] spawnsAleta;
+
+    public int tiempoDestroyMapa;
+    public int tiempoDestroyCoin;
+    public int tiempoDestroyAleta;
         
     void Start()
     {
-        InvokeRepeating("SpawnMapa", 5f, cooldownMapa); 
+        InvokeRepeating("SpawnMapa", 15f, cooldownMapa); 
+        InvokeRepeating("SpawnCoin", 5f, cooldownCoin); 
 
         StartCoroutine(SpawnAleta());
     }
@@ -31,8 +37,8 @@ public class Spawner : MonoBehaviour
 
         int randomSpawn = Random.Range(0,spawnsAleta.Length);
 
-        Instantiate(aleta, spawnsAleta[randomSpawn].transform.position,Quaternion.identity);
-
+        GameObject newAleta = Instantiate(aleta, spawnsAleta[randomSpawn].transform.position,Quaternion.identity);
+        Destroy(newAleta,tiempoDestroyAleta);
         if(cooldownAleta > 1f)
         {
             cooldownAleta = cooldownAleta - 0.25f;
@@ -40,16 +46,40 @@ public class Spawner : MonoBehaviour
        
         StartCoroutine(SpawnAleta());
     }
-
-    void SpawnMapa()
+    public void StartPowerUp()
     {
-        Debug.Log("Spawn Mapa");
+        StartCoroutine(PowerUp());
+    }
+    void SpawnMapa()
+    {        
         float randomX = Random.Range(minPosition.x, maxPosition.x);
         float randomZ = Random.Range(minPosition.z, maxPosition.z);
 
         Vector3 spawnPosition = new Vector3(randomX, transform.position.y, randomZ);
 
-        Instantiate(mapa, spawnPosition, Quaternion.identity);
+        GameObject newMap = Instantiate(mapa, spawnPosition, Quaternion.identity);
+        Destroy(newMap,tiempoDestroyCoin);
+
+    }
+    
+    void SpawnCoin()
+    {
+        Debug.Log("Spawn coin " + cooldownCoin);
+        float randomX = Random.Range(minPosition.x, maxPosition.x);
+        float randomZ = Random.Range(minPosition.z, maxPosition.z);
+
+        Vector3 spawnPosition = new Vector3(randomX, transform.position.y, randomZ);
+
+        GameObject newCoin =  Instantiate(coin, spawnPosition, Quaternion.identity);
+        Destroy(newCoin,tiempoDestroyCoin);
+
+    }
+    IEnumerator PowerUp()
+    {
+        cooldownCoin /= 2;
+        yield return new WaitForSeconds(15f);
+
+        cooldownCoin *= 2;
     }
     private void OnDrawGizmos()
     {

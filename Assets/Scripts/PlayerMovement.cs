@@ -14,18 +14,23 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 rotation;
 
     public bool canMove;
+
+
     public void Update()
     {
         rotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * _rotationSpeed * Time.deltaTime, 0);
         
         Vector3 move = new Vector3(0, 0, Input.GetAxisRaw("Vertical") * Time.deltaTime);
+
         if (canMove)
         {
             move = transform.TransformDirection(move);
             _controller.Move(move * _speed);
             transform.Rotate(rotation);
+  
         }      
 
+        //LIMITAR LA ZONA DE MOVIMIENTO
         Vector3 clampedPosition = this.transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, -limitX, limitX);
         clampedPosition.z = Mathf.Clamp(clampedPosition.z, -limitZ, limitZ);

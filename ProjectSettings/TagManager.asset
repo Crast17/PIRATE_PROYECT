@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mapa
   - Aleta
+  - Coin
   layers:
   - Default
   - TransparentFX
